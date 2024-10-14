@@ -8,10 +8,10 @@ class Personne{
 
 
     public function __construct(string $name, string $surname, string $gender, $birthdate){
-    $this -> name = $name;
-    $this -> surname = $surname;
-    $this -> gender = $gender;
-    $this -> birthdate = new DateTime($birthdate);
+        $this -> name = $name;
+        $this -> surname = $surname;
+        $this -> gender = $gender;
+        $this -> birthdate = new DateTime($birthdate);
     }
 
     public function getName() : string

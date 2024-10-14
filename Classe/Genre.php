@@ -1,9 +1,11 @@
 <?php
 class Genre{
     private string $nomDuGenre;
+    private array $films;
 
     public function __construct(string $nomDuGenre){
         $this -> nomDuGenre = $nomDuGenre;
+        $this -> films = [];
     }
 
 
@@ -18,8 +20,36 @@ class Genre{
         $this->nomDuGenre = $nomDuGenre;
     }
 
-    public function __tostring(){
-        $this -> nomDuGenre;
+
+    public function getFilms()
+    {
+        return $this->Films;
     }
+
+
+    public function setFilms($Films)
+    {
+        $this->Films = $Films;
+    }
+
+
+    public function recupererFilms(Film $film){
+        $this -> films[] = $film;
+    }
+    
+    public function __tostring() : string
+        {
+    $this -> nomDuGenre;
+    }
+
+    public function afficherParGenre(){
+        $result = "<h2>$this :</h2>";
+        foreach ($this->films as $film){
+            $result .= "$film<br>";
+        }
+        return $result;
+    }
+
+
 }
 ?>
