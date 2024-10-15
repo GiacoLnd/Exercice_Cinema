@@ -19,11 +19,11 @@ $comedy= new Genre("Comedie");
 
 
 
-$snatch = new Film("Snatch", "Franky vient de voler un énorme diamant qu'il doit livrer à Avi, un mafieux new-yorkais.<br> En chemin, il fait escale à Londres où il se laisse convaincre par Boris de parier sur un combat de boxe clandestin.", 2000, 120, $comedy);
+$snatch = new Film("Snatch", "Franky vient de voler un énorme diamant qu'il doit livrer à Avi, un mafieux new-yorkais.<br> En chemin, il fait escale à Londres où il se laisse convaincre par Boris de parier sur un combat de boxe clandestin.", 2000, 120, $horror);
 $entretien = new Film("Entretien avec un vampire", "Le destin de trois vampires se retrouve mêlé pendant des siècles, alternant entre amour et trahison, solitude et soif de vengeance.", 1994, 123, $horror);
 
 
-echo $comedy;
+echo $horror -> afficherParGenre();
 
 
 

@@ -20,7 +20,7 @@ class Personne{
     }
 
 
-    public function setName($name) : string
+    public function setName($name) 
     {
         $this->name = $name;
     }

@@ -1,4 +1,6 @@
 <?php
+
+
 class Genre{
     private string $nomDuGenre;
     private array $films;
@@ -9,7 +11,7 @@ class Genre{
     }
 
 
-    public function getNomDuGenre()
+    public function getNomDuGenre(): string
     {
         return $this->nomDuGenre;
     }
@@ -21,15 +23,15 @@ class Genre{
     }
 
 
-    public function getFilms()
+    public function getFilms(): array  
     {
-        return $this->Films;
+        return $this -> films;
     }
 
 
-    public function setFilms($Films)
+    public function setFilms(array $films)
     {
-        $this->Films = $Films;
+        $this -> films = $film;
     }
 
 
@@ -37,19 +39,17 @@ class Genre{
         $this -> films[] = $film;
     }
     
-    public function __tostring() : string
+    public function __tostring()         
         {
-    $this -> nomDuGenre;
+     return $this -> nomDuGenre;
     }
 
-    public function afficherParGenre(){
+    public function afficherParGenre()  {
         $result = "<h2>$this :</h2>";
         foreach ($this->films as $film){
-            $result .= "$film<br>";
+            $result .= "<br>". $film->getTitre();
         }
         return $result;
     }
-
-
 }
 ?>

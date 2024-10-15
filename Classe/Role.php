@@ -7,7 +7,7 @@ class Role{
     }
 
 
-    public function getNomDuRole()
+    public function getNomDuRole(): string
     {
         return $this->nomDuRole;
     }
@@ -19,7 +19,7 @@ class Role{
     }
 
     public function __tostring(){
-        $this -> nomDuRole;
+       return $this -> nomDuRole;
     }
 }
 

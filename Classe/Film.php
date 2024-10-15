@@ -2,17 +2,19 @@
 class Film{
     private string $titre;
     private string $synopsis;
-    private int $dateDeSortie;
+    private int $anneeSortie;
     private int $duree;
     private Genre $genre;
+    private Realisateur $realisateur;
 
-    public function __construct(string $titre, string $synopsis,int $dateDeSortie, int $duree, Genre $genre){
+    public function __construct(string $titre, string $synopsis,int $anneeSortie, int $duree, Genre $genre){
         $this -> titre = $titre;
         $this -> synopsis = $synopsis;
-        $this -> dateDeSortie = $dateDeSortie;
+        $this -> anneeSortie = $anneeSortie;
         $this -> duree = $duree;
         $this -> genre = $genre;
         $this -> genre -> recupererFilms($this);
+        
     }
 
     public function getTitre()
@@ -39,15 +41,15 @@ class Film{
     }
 
 
-    public function getDateDeSortie()
+    public function getAnneeSortie()
     {
-        return $this->dateDeSortie;
+        return $this->anneeSortie;
     }
 
 
-    public function setDateDeSortie($dateDeSortie)
+    public function setAnneeSortie($anneeSortie)
     {
-        $this->dateDeSortie = $dateDeSortie;
+        $this->anneeSortie = $anneeSortie;
     }
 
 
