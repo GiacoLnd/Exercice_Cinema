@@ -35,7 +35,7 @@ class Genre{
     }
 
 
-    public function recupererFilms(Film $film){
+    public function ajouterFilm(Film $film){
         $this -> films[] = $film;
     }
     

@@ -50,21 +50,34 @@ class Personne{
     }
 
 
-    public function getBirthdate(): DateTime
+    public function getBirthdate()
     {
-        return $this->birthdate;
+        return $this->birthdate->format('d/m/Y');
     }
 
 
     public function setBirthdate($birthdate)
     {
-        $this->birthdate = $birthdate;
+        $this->birthdate = new DateTime($birthdate);
 
     }
 
 
-    public function __tostring(){
-        return $this -> surname ." ". $this -> name ;
+    public function __toString(){
+        return $this -> surname ." ". $this -> name;
+    }
+
+
+    function calculteAge(): int{
+        $naissance = $this->birthdate->format("Y");
+        $annee = date("Y");
+        $age = $annee - $naissance; 
+        return $age;
+    }
+
+
+    public function getInfos(){
+        return "<br>".$this." (".$this -> gender.", ".$this->calculteAge()." ans) est né le ". $this->getBirthdate();
     }
 }
 ?>

@@ -2,15 +2,13 @@
 class Realisateur extends Personne{
     private array $films;
 
-    public function __construct( $name,  $surname,  $gender, $birthdate){
+    public function __construct(string $name, string $surname, string $gender, string $birthdate){
         parent::__construct($name, $surname, $gender, $birthdate);
         $this -> films = [];
     }
-
     
 
-
-    public function getFilms()
+    public function getFilms(): string 
     {
         return $this -> films;
     }
@@ -22,15 +20,15 @@ class Realisateur extends Personne{
     }
 
 
-    public function recupererReal(Film $film){
+    public function ajouterFilm(Film $film){
         $this -> films[] = $film;
     }
 
 
     public function filmoReal(){
-        $result = "<h2>$this :</h2>";
+        $result = "<h2>$this , a réalisé:</h2>";
         foreach ($this->films as $film){
-            $result .= "<br>". $film->getTitre();
+            $result .= "<br>". $film->getTitre()."<br>";
         }
         return $result;
     }
