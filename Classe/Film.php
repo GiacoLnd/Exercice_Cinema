@@ -7,13 +7,15 @@ class Film{
     private Genre $genre;
     private Realisateur $realisateur;
 
-    public function __construct(string $titre, string $synopsis,int $anneeSortie, int $duree, Genre $genre){
+    public function __construct(string $titre, string $synopsis,int $anneeSortie, int $duree, Genre $genre, Realisateur $realisateur){
         $this -> titre = $titre;
         $this -> synopsis = $synopsis;
         $this -> anneeSortie = $anneeSortie;
         $this -> duree = $duree;
         $this -> genre = $genre;
         $this -> genre -> recupererFilms($this);
+        $this -> realisateur = $realisateur;
+        $this -> realisateur -> recupererReal($this);
         
     }
 
@@ -75,23 +77,36 @@ class Film{
     {
         $this->genre = $genre;
     }
+    
+    public function getRealisateur()
+    {
+        return $this -> realisateur;
+    }
+
+
+    public function setRealisateur(Realisteur $realisateur)
+    {
+        $this -> realisateur = $realisateur;
+    }
 
 
     public function __tostring(){
         return ".$this -> titre";
     }
 
-
-
-
-
-
-
-
-
-
-
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
