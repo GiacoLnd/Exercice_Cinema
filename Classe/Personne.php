@@ -7,7 +7,7 @@ class Personne{
     protected Datetime $birthdate;
 
 
-    public function __construct(string $name, string $surname, string $gender, $birthdate){
+    public function __construct(string $name, string $surname, string $gender, String $birthdate){
         $this -> name = $name;
         $this -> surname = $surname;
         $this -> gender = $gender;
@@ -50,7 +50,7 @@ class Personne{
     }
 
 
-    public function getBirthdate()
+    public function getBirthdate() : String
     {
         return $this->birthdate->format('d/m/Y');
     }
@@ -68,7 +68,7 @@ class Personne{
     }
 
 
-    function calculteAge(): int{
+    function calculteAge(): int{                      // Intégration du calcul de l'âge de la personne
         $naissance = $this->birthdate->format("Y");
         $annee = date("Y");
         $age = $annee - $naissance; 

@@ -10,40 +10,41 @@ Class Casting{
         $this -> role = $role;
         $this -> acteur -> ajouterCast($this);
         $this -> film -> ajouterCast($this);
+        $this -> role -> ajouterCast($this);
     }
 
 
-    public function getActeur()
+    public function getActeur(): Acteur
     {
         return $this->acteur;
     }
 
 
-    public function setActeur($acteur)
+    public function setActeur(Acteur $acteur)
     {
         $this->acteur = $acteur;
 
     }
 
 
-    public function getRole()
+    public function getRole(): Role
     {
         return $this->role;
     }
 
 
-    public function setRole($role)
+    public function setRole(Role $role)
     {
         $this->role = $role;
     }
 
-    public function getFilm()
+    public function getFilm(): Film
     {
         return $this->film;
     }
 
 
-    public function setFilm($film)
+    public function setFilm(Film $film)
     {
         $this->film = $film;
     }

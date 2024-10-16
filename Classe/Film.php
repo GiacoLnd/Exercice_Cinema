@@ -21,7 +21,7 @@ class Film{
         
     }
 
-    public function getTitre()
+    public function getTitre() : String
     {
         return $this->titre;
     }
@@ -33,7 +33,7 @@ class Film{
     }
 
 
-    public function getSynopsis()
+    public function getSynopsis() : String
     {
         return $this->synopsis;
     }
@@ -45,7 +45,7 @@ class Film{
     }
 
 
-    public function getAnneeSortie()
+    public function getAnneeSortie() : Int
     {
         return $this->anneeSortie;
     }
@@ -57,7 +57,7 @@ class Film{
     }
 
 
-    public function getDuree()
+    public function getDuree() : Int
     {
         return $this->duree;
     }
@@ -69,7 +69,7 @@ class Film{
     }
 
 
-    public function getGenre()
+    public function getGenre() : Genre
     {
         return $this->genre;
     }
@@ -80,7 +80,7 @@ class Film{
         $this->genre = $genre;
     }
     
-    public function getRealisateur()
+    public function getRealisateur() : Realisateur
     {
         return $this -> realisateur;
     }
@@ -92,7 +92,7 @@ class Film{
     }
 
 
-    public function getCasts()
+    public function getCasts() : Casting
     {
         return $this->casts;
     }

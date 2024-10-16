@@ -39,7 +39,7 @@ class Genre{
         $this -> films[] = $film;
     }
     
-    public function __tostring()         
+    public function __toString()         
         {
      return $this -> nomDuGenre;
     }

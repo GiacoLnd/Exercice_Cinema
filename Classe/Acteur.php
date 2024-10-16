@@ -9,7 +9,7 @@ class Acteur extends Personne{
     }
 
 
-    public function getCasts()
+    public function getCasts() : array
     {
         return $this->casts;
     }
