@@ -47,7 +47,7 @@ class Role{
     public function afficherCast(){
         $result = "<h2>$this a été joué par les acteurs suivants :</h2>";
         foreach ($this->casts as $cast){
-            $result .= "<strong>".$cast->getActeur()->getSurname()." ".$cast->getActeur()->getName()."</strong> dans le film <strong>".$cast->getFilm()->getTitre()."</strong><br>";
+            $result .= "<strong>".$cast->getActeur($this)."</strong> dans le film <strong>".$cast->getFilm($this)."</strong><br>";
         }
         return $result;
     }

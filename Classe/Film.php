@@ -121,7 +121,7 @@ class Film{
     public function afficherCast(){
         $result = "<h2>$this</h2>";
         foreach ($this->casts as $cast){
-            $result .= $cast->getRole()->getNomDuRole()." a été incarné par ".$cast->getActeur()->getSurname()." ".$cast->getActeur()->getName()."<br>";
+            $result .= $cast->getRole($this)." a été incarné par ".$cast->getActeur($this)."<br>";
         }
         return $result;
     }

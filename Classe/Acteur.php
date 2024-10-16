@@ -29,7 +29,7 @@ class Acteur extends Personne{
     public function afficherCast(){
         $result = "<h2>$this, a incarné :</h2>";
         foreach ($this->casts as $cast){
-            $result .= "<br>". $cast->getRole()->getNomDuRole()." dans le film ".$cast->getFilm()->getTitre()."<br>";
+            $result .= "<br>". $cast->getRole($this)." dans le film ".$cast->getFilm($this)."<br>";
         }
         return $result;
     }
